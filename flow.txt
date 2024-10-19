@@ -1,0 +1,61 @@
+Start
+  |
+  V
+Load YOLO Model
+  |
+  V
+Load Input Image (cv2.imread)
+  |
+  V
+Perform YOLO Inference (yolo_model)
+  |
+  V
+Extract Results from YOLO Output
+  | 
+  V
+Iterate Through Detected Objects
+  |   (For each object: extract bounding box, class name)
+  +---------------------------------------+
+  |                                       |
+  V                                       V
+Draw Bounding Boxes on Image         Save Bounding Box Coordinates 
+                                      and Class Names for Later Use
+  |                                       |
+  V                                       |
+Display Image with Bounding Boxes <-------+
+  |
+  V
+Load Depth Model and Preprocess Image for Depth Estimation
+  |
+  V
+Perform Depth Estimation Inference
+  |
+  V
+Obtain Depth Values from Depth Map (Depth as numpy array)
+  |
+  V
+For Each Detected Object:
+  |   (Calculate the center of each bounding box)
+  +----------------------------+
+  |                            |
+  V                            V
+Retrieve Depth Value     Draw Depth Information 
+at Bounding Box Center   Next to Bounding Box
+  |
+  V
+Display Image with Depth Information
+  |
+  V
+Save Final Image with Bounding Boxes and Depth Data
+  |
+  V
+Normalize and Invert Depth Map
+  |
+  V
+Display Inverted Depth Map
+  |
+  V
+Save Inverted Depth Map
+  |
+  V
+End
